@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src https://formspree.io; form-action https://formspree.io; base-uri 'self'; object-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Contact et devis gratuit · Mirabelle Code, Metz</title>
+  <meta name="description" content="Demandez un devis gratuit pour votre site internet ou votre logiciel sur mesure. Réponse sous 48 heures. Metz, Moselle et Luxembourg.">
+  <link rel="canonical" href="https://mirabellecode.fr/html/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Mirabelle Code">
+  <meta property="og:title" content="Contact et devis gratuit · Mirabelle Code, Metz">
+  <meta property="og:description" content="Demandez un devis gratuit pour votre site internet ou votre logiciel sur mesure. Réponse sous 48 heures. Metz, Moselle et Luxembourg.">
+  <meta property="og:url" content="https://mirabellecode.fr/html/contact.html">
+  <meta property="og:image" content="https://mirabellecode.fr/assets/img/og-image.png">
+  <meta property="og:image:alt" content="Logo Mirabelle Code : une mirabelle et du code, De la terre à la technologie">
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <script type="module" src="../js/main.js"></script>
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+  <header class="entete">
+    <div class="conteneur entete__interieur">
+      <a class="entete__logo" href="../index.html"><img src="../assets/img/logo.png" alt="Mirabelle Code, retour à l'accueil" width="420" height="197"></a>
+      <nav class="nav" data-nav aria-label="Navigation principale">
+        <button class="nav__bouton" type="button" aria-expanded="false" aria-controls="menu-principal" hidden>Menu</button>
+        <ul class="nav__liste" id="menu-principal">
+          <li><a class="nav__lien" href="../index.html">Accueil</a></li>
+          <li><a class="nav__lien" href="offres.html">Offres et tarifs</a></li>
+          <li><a class="nav__lien" href="realisations.html">Réalisations</a></li>
+          <li><a class="nav__lien" href="a-propos.html">À propos</a></li>
+          <li><a class="nav__lien nav__lien--devis" href="contact.html" aria-current="page">Demander un devis</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="page-titre">
+      <div class="conteneur">
+        <h1>Demander un devis gratuit</h1>
+        <p>Décrivez votre projet en quelques lignes : je vous réponds sous 48 heures, sans engagement.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Formulaire et coordonnées">
+      <div class="conteneur contact">
+        <form class="formulaire" action="https://formspree.io/f/mljgbkel" method="POST" data-formulaire-contact>
+          <p>Les champs marqués « obligatoire » doivent être remplis.</p>
+
+          <div class="champ">
+            <label for="nom">Nom <span class="champ__mention">(obligatoire)</span></label>
+            <input id="nom" name="nom" type="text" autocomplete="name" maxlength="100" required aria-required="true" aria-describedby="nom-erreur" data-champ>
+            <p class="champ__erreur" id="nom-erreur"></p>
+          </div>
+
+          <div class="champ">
+            <label for="entreprise">Entreprise</label>
+            <input id="entreprise" name="entreprise" type="text" autocomplete="organization" maxlength="100" aria-describedby="entreprise-erreur" data-champ>
+            <p class="champ__erreur" id="entreprise-erreur"></p>
+          </div>
+
+          <div class="champ">
+            <label for="email">Adresse e-mail <span class="champ__mention">(obligatoire, exemple : nom@domaine.fr)</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required aria-required="true" aria-describedby="email-erreur" data-champ>
+            <p class="champ__erreur" id="email-erreur"></p>
+          </div>
+
+          <div class="champ">
+            <label for="telephone">Téléphone <span class="champ__mention">(exemple : 06 12 34 56 78)</span></label>
+            <input id="telephone" name="telephone" type="tel" autocomplete="tel" maxlength="20" aria-describedby="telephone-erreur" data-champ>
+            <p class="champ__erreur" id="telephone-erreur"></p>
+          </div>
+
+          <div class="champ">
+            <label for="projet">Type de projet <span class="champ__mention">(obligatoire)</span></label>
+            <select id="projet" name="projet" required aria-required="true" aria-describedby="projet-erreur" data-champ>
+              <option value="">Choisissez une option</option>
+              <option value="Site vitrine">Site vitrine</option>
+              <option value="Logiciel sur mesure">Logiciel sur mesure</option>
+              <option value="Maintenance">Maintenance d'un site existant</option>
+              <option value="Autre">Autre</option>
+            </select>
+            <p class="champ__erreur" id="projet-erreur"></p>
+          </div>
+
+          <div class="champ">
+            <label for="message">Votre projet <span class="champ__mention">(obligatoire)</span></label>
+            <textarea id="message" name="message" maxlength="3000" required aria-required="true" aria-describedby="message-erreur" data-champ></textarea>
+            <p class="champ__erreur" id="message-erreur"></p>
+          </div>
+
+          <div class="piege" aria-hidden="true">
+            <label for="site-web">Ne pas remplir ce champ</label>
+            <input id="site-web" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <p class="mention">Vos informations servent uniquement à répondre à votre demande. Elles sont transmises par le service Formspree, conservées 3 ans au maximum, et vous pouvez demander leur suppression à tout moment par mail. Détails dans les <a href="mentions-legales.html">mentions légales</a>.</p>
+
+          <div class="etat" role="status" aria-live="polite" data-etat></div>
+
+          <button class="bouton bouton--principal" type="submit">Envoyer ma demande</button>
+        </form>
+
+        <aside class="contact__infos" aria-labelledby="titre-direct">
+          <h2 id="titre-direct">Me joindre directement</h2>
+          <p>Par mail : <a href="mailto:stevens.wrc@gmail.com">stevens.wrc@gmail.com</a></p>
+          <p>Par téléphone : <a href="tel:+33660852860">06 60 85 28 60</a></p>
+          <p>Je me déplace à Metz et dans toute la Moselle, et je travaille aussi à distance, notamment avec le Luxembourg.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur pied__interieur">
+      <div class="pied__bloc">
+        <p class="pied__nom">Mirabelle Code</p>
+        <p>De la terre à la technologie. Sites et logiciels sur mesure à Metz, en Moselle et au Luxembourg.</p>
+      </div>
+      <div class="pied__bloc">
+        <h2 class="pied__titre">Contact</h2>
+        <ul class="pied__liste">
+          <li><a href="mailto:stevens.wrc@gmail.com">stevens.wrc@gmail.com</a></li>
+          <li><a href="tel:+33660852860">06 60 85 28 60</a></li>
+        </ul>
+      </div>
+      <div class="pied__bloc">
+        <h2 class="pied__titre">Informations</h2>
+        <ul class="pied__liste">
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="https://gb-william.github.io" rel="noopener">Portfolio de William Stevens</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pied__copyright">© 2026 Mirabelle Code · William Stevens</p>
+  </footer>
+  <a class="barre-appel" href="tel:+33660852860">Appeler le 06 60 85 28 60</a>
+</body>
+</html>

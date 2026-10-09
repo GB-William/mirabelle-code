@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src https://formspree.io; form-action https://formspree.io; base-uri 'self'; object-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>À propos · William Stevens, développeur web à Metz</title>
+  <meta name="description" content="Derrière Mirabelle Code, William Stevens, développeur web à Metz. Ma méthode : écouter, montrer une maquette, livrer, puis rester disponible.">
+  <link rel="canonical" href="https://mirabellecode.fr/html/a-propos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Mirabelle Code">
+  <meta property="og:title" content="À propos · William Stevens, développeur web à Metz">
+  <meta property="og:description" content="Derrière Mirabelle Code, William Stevens, développeur web à Metz. Ma méthode : écouter, montrer une maquette, livrer, puis rester disponible.">
+  <meta property="og:url" content="https://mirabellecode.fr/html/a-propos.html">
+  <meta property="og:image" content="https://mirabellecode.fr/assets/img/og-image.png">
+  <meta property="og:image:alt" content="Logo Mirabelle Code : une mirabelle et du code, De la terre à la technologie">
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <script type="module" src="../js/main.js"></script>
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+  <header class="entete">
+    <div class="conteneur entete__interieur">
+      <a class="entete__logo" href="../index.html"><img src="../assets/img/logo.png" alt="Mirabelle Code, retour à l'accueil" width="420" height="197"></a>
+      <nav class="nav" data-nav aria-label="Navigation principale">
+        <button class="nav__bouton" type="button" aria-expanded="false" aria-controls="menu-principal" hidden>Menu</button>
+        <ul class="nav__liste" id="menu-principal">
+          <li><a class="nav__lien" href="../index.html">Accueil</a></li>
+          <li><a class="nav__lien" href="offres.html">Offres et tarifs</a></li>
+          <li><a class="nav__lien" href="realisations.html">Réalisations</a></li>
+          <li><a class="nav__lien" href="a-propos.html" aria-current="page">À propos</a></li>
+          <li><a class="nav__lien nav__lien--devis" href="contact.html">Demander un devis</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="page-titre">
+      <div class="conteneur">
+        <h1>À propos</h1>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-qui">
+      <div class="conteneur apropos">
+        <img class="apropos__photo" src="../assets/img/william-stevens.jpg" alt="Portrait de William Stevens" width="384" height="384">
+        <div class="flux">
+          <h2 id="titre-qui">Bonjour, je suis William Stevens</h2>
+          <p>Je suis développeur web à Metz, en formation en développement informatique. J'ai créé Mirabelle Code pour aider les commerçants, les artisans et les indépendants de la région à avoir des outils numériques simples, qui leur ressemblent.</p>
+          <p>Le nom vient de la mirabelle, le fruit de notre Lorraine : quelque chose de local, de simple et de bien fait. C'est l'esprit de mon travail.</p>
+          <p>Je parle français et anglais, ce qui est pratique pour les entreprises qui travaillent avec le Luxembourg.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--claire" aria-labelledby="titre-methode">
+      <div class="conteneur">
+        <h2 class="section__titre" id="titre-methode">Ma façon de travailler</h2>
+        <ol class="etapes">
+          <li><strong>J'écoute votre besoin.</strong> On se voit ou on s'appelle, vous me parlez de votre activité.</li>
+          <li><strong>Je vous montre une maquette.</strong> Vous voyez à quoi ressemblera votre site ou votre outil avant que je le construise.</li>
+          <li><strong>Je livre.</strong> Je mets tout en ligne et je vous montre comment ça marche.</li>
+          <li><strong>Je reste disponible.</strong> Une question, une modification : vous avez mon numéro.</li>
+        </ol>
+        <p class="mention">Pour le détail de mes compétences techniques, voir mon <a href="https://gb-william.github.io" rel="noopener">portfolio de développeur</a>.</p>
+      </div>
+    </section>
+
+    <section class="section appel-final" aria-labelledby="titre-appel">
+      <div class="conteneur">
+        <h2 class="section__titre" id="titre-appel">On en parle ?</h2>
+        <div class="actions">
+          <a class="bouton bouton--principal" href="contact.html">Me contacter</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur pied__interieur">
+      <div class="pied__bloc">
+        <p class="pied__nom">Mirabelle Code</p>
+        <p>De la terre à la technologie. Sites et logiciels sur mesure à Metz, en Moselle et au Luxembourg.</p>
+      </div>
+      <div class="pied__bloc">
+        <h2 class="pied__titre">Contact</h2>
+        <ul class="pied__liste">
+          <li><a href="mailto:stevens.wrc@gmail.com">stevens.wrc@gmail.com</a></li>
+          <li><a href="tel:+33660852860">06 60 85 28 60</a></li>
+        </ul>
+      </div>
+      <div class="pied__bloc">
+        <h2 class="pied__titre">Informations</h2>
+        <ul class="pied__liste">
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="https://gb-william.github.io" rel="noopener">Portfolio de William Stevens</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pied__copyright">© 2026 Mirabelle Code · William Stevens</p>
+  </footer>
+  <a class="barre-appel" href="tel:+33660852860">Appeler le 06 60 85 28 60</a>
+</body>
+</html>

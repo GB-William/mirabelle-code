@@ -1,0 +1,177 @@
+.page-erreur {
+  padding-block: 4rem;
+  text-align: center;
+}
+
+.page-erreur p {
+  margin-inline: auto;
+}
+
+.page-erreur .actions {
+  justify-content: center;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: 3.5rem 3rem;
+}
+
+.hero .conteneur {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__sur-titre {
+  margin-bottom: 0.75rem;
+  color: var(--marine);
+  font-weight: 600;
+}
+
+.hero__slogan {
+  margin-top: 0.75rem;
+  font-family: var(--police-titre);
+  font-size: 1.25rem;
+  color: var(--gris);
+}
+
+.hero__texte {
+  margin-top: 1rem;
+}
+
+.hero__decor {
+  position: absolute;
+  top: -4rem;
+  right: -6rem;
+  z-index: 0;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background-color: var(--mirabelle);
+  opacity: 0.35;
+}
+
+.hero__decor--feuille {
+  top: auto;
+  right: auto;
+  bottom: -5rem;
+  left: -4rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--feuille);
+  opacity: 0.15;
+}
+
+.vignette__type {
+  color: var(--feuille);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.appel-final {
+  text-align: center;
+}
+
+.appel-final p {
+  margin-inline: auto;
+}
+
+.appel-final .actions {
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-block: 5.5rem 5rem;
+  }
+
+  .hero__decor:not(.hero__decor--feuille) {
+    width: 24rem;
+    height: 24rem;
+  }
+}
+
+.realisation {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.realisation + .realisation {
+  margin-top: 3.5rem;
+}
+
+.realisation__image {
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre);
+}
+
+.realisation__details {
+  display: grid;
+  gap: 0.25rem 1rem;
+}
+
+.realisation__details dt {
+  margin-top: 0.75rem;
+  color: var(--feuille);
+  font-weight: 600;
+}
+
+.apropos {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.apropos__photo {
+  width: 12rem;
+  height: 12rem;
+  border: 4px solid var(--mirabelle);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .apropos {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .realisation:has(.realisation__image) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact__infos {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.contact__infos a {
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.texte-legal h2 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.375rem;
+}
+
+.texte-legal p,
+.texte-legal li {
+  margin-bottom: 0.5rem;
+}

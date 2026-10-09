@@ -1,0 +1,255 @@
+.conteneur {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.section {
+  padding-block: 3rem;
+}
+
+.section--claire {
+  background-color: var(--surface);
+}
+
+.section__titre {
+  margin-bottom: 1rem;
+}
+
+.section__intro {
+  margin-bottom: 2rem;
+  color: var(--gris);
+}
+
+.page-titre {
+  padding-block: 2.5rem 1rem;
+}
+
+.page-titre p {
+  margin-top: 0.75rem;
+  color: var(--gris);
+}
+
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--creme);
+  border-bottom: 1px solid rgb(28 58 94 / 0.15);
+}
+
+.entete__interieur {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-block: 0.75rem;
+}
+
+.entete__logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.entete__logo img {
+  width: auto;
+  height: 4rem;
+}
+
+.nav {
+  width: 100%;
+}
+
+.nav__liste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 0 0;
+  list-style: none;
+}
+
+.nav__lien {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--marine);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav__lien:hover {
+  background-color: rgb(244 178 35 / 0.3);
+}
+
+.nav__lien[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: var(--mirabelle);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.4em;
+}
+
+.nav__lien--devis {
+  justify-content: center;
+  background-color: var(--mirabelle);
+  border: 2px solid var(--marine);
+}
+
+.nav__bouton {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--marine);
+  border-radius: 0.5rem;
+  background-color: var(--surface);
+  color: var(--marine);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav--active {
+  width: auto;
+}
+
+.nav--active .nav__liste {
+  display: none;
+}
+
+.nav--active.nav--ouvert .nav__liste {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 1rem 1.25rem 1.25rem;
+  background-color: var(--creme);
+  border-bottom: 1px solid rgb(28 58 94 / 0.15);
+  box-shadow: var(--ombre);
+  max-height: calc(100dvh - 5rem);
+  overflow-y: auto;
+}
+
+.pied {
+  padding-block: 2.5rem 6rem;
+  background-color: var(--marine);
+  color: var(--creme);
+}
+
+.pied a {
+  color: var(--creme);
+}
+
+.pied :focus-visible {
+  outline-color: var(--creme);
+}
+
+.pied__interieur {
+  display: grid;
+  gap: 2rem;
+}
+
+.pied__nom {
+  font-family: var(--police-titre);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.pied__titre {
+  margin-bottom: 0.25rem;
+  font-family: var(--police-texte);
+  font-size: 1rem;
+}
+
+.pied__liste {
+  padding: 0;
+  list-style: none;
+}
+
+.pied__liste a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.pied__copyright {
+  max-width: none;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.barre-appel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.5rem;
+  background-color: var(--mirabelle);
+  border-top: 2px solid var(--marine);
+  color: var(--marine);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: 4.5rem;
+  }
+
+  .pied__interieur {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .entete__logo img {
+    height: 5rem;
+  }
+
+  html {
+    scroll-padding-bottom: 0;
+  }
+
+  .nav,
+  .nav--active {
+    width: auto;
+  }
+
+  .nav__bouton {
+    display: none;
+  }
+
+  .nav__liste,
+  .nav--active .nav__liste,
+  .nav--active.nav--ouvert .nav__liste {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .pied {
+    padding-bottom: 2.5rem;
+  }
+
+  .barre-appel {
+    display: none;
+  }
+}
