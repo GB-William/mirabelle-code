@@ -1,0 +1,145 @@
+/*
+  Thème Halloween : chargé après les autres feuilles, il ne fait que surcharger.
+  Pour revenir au thème normal, retirer la ligne <link> de halloween.css dans les pages.
+*/
+
+:root {
+  --creme: #17121F;
+  --surface: #241C30;
+  --marine: #F2E8D5;
+  --gris: #C9BED6;
+  --mirabelle: #F2711C;
+  --feuille: #7BC86C;
+  --lien: #FFB36B;
+  --erreur: #FF8A80;
+  --fond-succes: #1E3320;
+  --fond-erreur: #3D1C22;
+  --nuit: #0D0A12;
+  --ombre: 0 0.25rem 1.25rem rgb(0 0 0 / 0.45);
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 88% 6rem, rgb(255 214 150 / 0.14) 0, rgb(255 214 150 / 0.04) 9rem, transparent 14rem),
+    linear-gradient(180deg, #1D1528 0, var(--creme) 40rem);
+  background-repeat: no-repeat;
+}
+
+.entete {
+  background-color: var(--creme);
+  border-bottom: 2px dashed var(--mirabelle);
+}
+
+.entete__logo img {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--marine);
+}
+
+.nav__lien--devis,
+.bouton--principal,
+.barre-appel,
+.encart,
+.etapes li::before {
+  color: var(--nuit);
+}
+
+.nav__lien--devis,
+.bouton--principal,
+.barre-appel {
+  border-color: var(--nuit);
+}
+
+.encart a {
+  color: var(--nuit);
+}
+
+.encart :focus-visible,
+.barre-appel :focus-visible {
+  outline-color: var(--nuit);
+}
+
+.badge,
+.provisoire::before {
+  color: var(--nuit);
+}
+
+.carte {
+  border: 1px solid rgb(242 113 28 / 0.25);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.carte:hover {
+  border-color: var(--mirabelle);
+  box-shadow: 0 0 1.25rem rgb(242 113 28 / 0.35);
+}
+
+.pied {
+  background-color: var(--nuit);
+  color: var(--marine);
+  border-top: 2px dashed var(--mirabelle);
+}
+
+.pied a {
+  color: var(--marine);
+}
+
+.pied :focus-visible {
+  outline-color: var(--marine);
+}
+
+.page-titre h1::after,
+.hero h1::after {
+  content: " 🎃";
+  content: " 🎃" / "";
+}
+
+.pied__copyright::after {
+  content: " 🦇";
+  content: " 🦇" / "";
+}
+
+.hero__decor:not(.hero__decor--feuille) {
+  background-color: var(--mirabelle);
+  background-image: repeating-linear-gradient(90deg, transparent 0 18%, rgb(0 0 0 / 0.12) 18% 21%);
+  box-shadow: inset -1.5rem -1rem 3rem rgb(0 0 0 / 0.3);
+  opacity: 0.45;
+}
+
+.hero__decor--feuille {
+  background-color: #F5E6B8;
+  box-shadow: 0 0 3rem rgb(245 230 184 / 0.5);
+  opacity: 0.4;
+}
+
+.entete__interieur::after {
+  content: "🕷️";
+  content: "🕷️" / "";
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  padding-top: 2.5rem;
+  border-left: 1px solid rgb(242 232 213 / 0.7);
+  font-size: 1.25rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 0.3rem rgb(242 232 213 / 0.9));
+  pointer-events: none;
+  transform-origin: top center;
+  animation: araignee 4s ease-in-out infinite alternate;
+}
+
+@keyframes araignee {
+  from {
+    padding-top: 1.5rem;
+  }
+
+  to {
+    padding-top: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .entete__interieur::after {
+    right: 0;
+  }
+}
